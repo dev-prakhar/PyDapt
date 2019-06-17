@@ -1,2 +1,2 @@
-# python-openstruct
+# Flexible Object
 Ruby's OpenStruct for python
