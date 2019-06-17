@@ -29,7 +29,6 @@ class FlexibleObject(object):
     def drop(self, key):
         """
         Delete given attribute from object
-        :param key:
         """
         self.__dict__.pop(key)
 
