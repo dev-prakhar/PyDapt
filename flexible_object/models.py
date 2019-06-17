@@ -30,7 +30,7 @@ class FlexibleObject(object):
         """
         Delete given attribute from object
         """
-        self.__dict__.pop(key)
+        return self.__dict__.pop(key, None)
 
     def __str__(self):
         """
