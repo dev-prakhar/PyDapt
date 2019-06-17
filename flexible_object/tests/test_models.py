@@ -1,5 +1,6 @@
 import unittest
 
+from flexible_object.exceptions import InvalidArgumentException
 from flexible_object.models import FlexibleObject
 
 
@@ -78,3 +79,9 @@ class FlexibleObjectTest(unittest.TestCase):
         }
         flexible_object = FlexibleObject(test_dict)
         self.assertEqual(str(flexible_object), "{'a': 1, 'b': 2, 'c': {'aa': 11, 'bb': 22}}")
+
+    def test_invalid_exception(self):
+        with self.assertRaises(InvalidArgumentException) as context:
+            FlexibleObject(1)
+
+        self.assertEqual(context.exception.message, 'Argument supplied to Flexible Object is not of type: <dict>')
