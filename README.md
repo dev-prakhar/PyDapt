@@ -57,7 +57,7 @@ print(flexible_object.test) # 1
 print(flexible_object.test1.test2) # 2
 
 flexible_object.drop('test3') # None
-flexible_object.drop('test1') # 1
+flexible_object.drop('test') # 1
 
-print(flexible_object.test1) # AttributeError: 'FlexibleObject' object has no attribute 'test1'
+print(flexible_object.test) # AttributeError: 'FlexibleObject' object has no attribute 'test'
 ```
