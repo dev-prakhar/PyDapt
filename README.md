@@ -11,7 +11,7 @@ It is similar to the [OpenStruct](https://ruby-doc.org/stdlib-2.5.1/libdoc/ostru
 # Installation
 
 ```
-Python Verions Required >= 3
+Python Version Required >= 3
 ```
 ```
 pip install flexible-object
