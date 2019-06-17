@@ -20,11 +20,8 @@ class FlexibleObject(object):
         This method set the attributes present in kwargs to the self
         """
         for key, value in attributes_dict.items():
-            if isinstance(value, dict):
-                flexible_object = FlexibleObject(value)
-                setattr(self, key, flexible_object)
-            else:
-                setattr(self, key, value)
+            setattr(self, key, FlexibleObject(value)) if isinstance(value, dict) else setattr(self, key, value)
+
 
     def drop(self, key):
         """
