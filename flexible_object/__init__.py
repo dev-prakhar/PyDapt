@@ -1,0 +1,1 @@
+name = 'flexible_object'
