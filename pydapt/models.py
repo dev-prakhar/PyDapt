@@ -1,10 +1,10 @@
-from flexible_object.constants import INVALID_ARGS_ERROR
-from flexible_object.exceptions import InvalidArgumentException
+from pydapt.constants import INVALID_ARGS_ERROR
+from pydapt.exceptions import InvalidArgumentException
 
 
-class FlexibleObject(object):
+class PyFlex(object):
     """
-    Flexible Object converts a dictionary to object
+    PyFlex converts a dictionary to object
     """
 
     def __init__(self, dictionary=None, **kwargs):
@@ -20,7 +20,7 @@ class FlexibleObject(object):
         This method set the attributes present in kwargs to the self
         """
         for key, value in attributes_dict.items():
-            setattr(self, key, FlexibleObject(value)) if isinstance(value, dict) else setattr(self, key, value)
+            setattr(self, key, PyFlex(value)) if isinstance(value, dict) else setattr(self, key, value)
 
 
     def drop(self, key):
@@ -40,6 +40,6 @@ class FlexibleObject(object):
         Returns the dictionary representation of the object
         """
         return {
-            key: value.__dict_repr() if isinstance(value, FlexibleObject) else value
+            key: value.__dict_repr() if isinstance(value, PyFlex) else value
             for key, value in self.__dict__.items()
         }

@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![codecov](https://codecov.io/gh/dev-prakhar/flexible-object/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-prakhar/flexible-object)
-[![Build Status](https://travis-ci.com/dev-prakhar/flexible-object.svg?branch=master)](https://travis-ci.com/dev-prakhar/flexible-object)
+[![codecov](https://codecov.io/gh/dev-prakhar/pydapt/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-prakhar/pydapt)
+[![Build Status](https://travis-ci.com/dev-prakhar/pydapt.svg?branch=master)](https://travis-ci.com/dev-prakhar/pydapt)
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 
 # Flexible Object
@@ -14,7 +14,7 @@ It is similar to the [OpenStruct](https://ruby-doc.org/stdlib-2.5.1/libdoc/ostru
 Python Version Required >= 3
 ```
 ```
-pip install flexible-object
+pip install pydapt
 ```
 
 # Usage
@@ -22,42 +22,42 @@ pip install flexible-object
 ### Converting a dictionary to Object
 
 ```python
-from flexible_object.models import FlexibleObject
+from pydapt.models import PyFlex
 
 dictionary = {"test": 1, "test1": {"test2": 2}}
-flexible_object = FlexibleObject(dictionary)
+pyflex = PyFlex(dictionary)
 
-print(flexible_object.test) # 1
-print(flexible_object.test1.test2) # 2
+print(pyflex.test) # 1
+print(pyflex.test1.test2) # 2
 ```
 
 ### Converting a dictionary to Object with kwargs
 
 ```python
-from flexible_object.models import FlexibleObject
+from pyflex.models import PyFlex
 
 dictionary = {"test": 1, "test1": {"test2": 2}}
-flexible_object = FlexibleObject(dictionary, test3=3, test4=4)
+pyflex = PyFlex(dictionary, test3=3, test4=4)
 
-print(flexible_object.test) # 1
-print(flexible_object.test1.test2) # 2
-print(flexible_object.test3) # 3
-print(flexible_object.test4) # 4
+print(pyflex.test) # 1
+print(pyflex.test1.test2) # 2
+print(pyflex.test3) # 3
+print(pyflex.test4) # 4
 ```
 
 ### Deleting an attribute
 
 ```python
-from flexible_object.models import FlexibleObject
+from pyflex.models import PyFlex
 
 dictionary = {"test": 1, "test1": {"test2": 2}}
-flexible_object = FlexibleObject(dictionary)
+pyflex = PyFlex(dictionary)
 
-print(flexible_object.test) # 1
-print(flexible_object.test1.test2) # 2
+print(pyflex.test) # 1
+print(pyflex.test1.test2) # 2
 
-flexible_object.drop('test3') # None
-flexible_object.drop('test') # 1
+pyflex.drop('test3') # None
+pyflex.drop('test') # 1
 
-print(flexible_object.test) # AttributeError: 'FlexibleObject' object has no attribute 'test'
+print(pyflex.test) # AttributeError: 'PyFlex' object has no attribute 'test'
 ```
