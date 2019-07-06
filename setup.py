@@ -9,14 +9,14 @@ def readme():
 
 
 setuptools.setup(
-    name='flexible-object',
-    version='0.3',
+    name='pydapt',
+    version='0.4',
     author="Prakhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="Ruby's OpenStruct for python",
     long_description=readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/dev-prakhar/flexible-object",
+    url="https://github.com/dev-prakhar/pydapt",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
