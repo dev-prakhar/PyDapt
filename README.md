@@ -34,7 +34,7 @@ print(pyflex.test1.test2) # 2
 ### Converting a dictionary to Object with kwargs
 
 ```python
-from pyflex.models import PyFlex
+from pydapt.models import PyFlex
 
 dictionary = {"test": 1, "test1": {"test2": 2}}
 pyflex = PyFlex(dictionary, test3=3, test4=4)
@@ -48,7 +48,7 @@ print(pyflex.test4) # 4
 ### Deleting an attribute
 
 ```python
-from pyflex.models import PyFlex
+from pydapt.models import PyFlex
 
 dictionary = {"test": 1, "test1": {"test2": 2}}
 pyflex = PyFlex(dictionary)
