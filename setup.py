@@ -10,7 +10,7 @@ def readme():
 
 setuptools.setup(
     name='pydapt',
-    version='0.2',
+    version='0.3',
     author="Prakhar Shrivastava",
     author_email="prakhars1996@gmail.com",
     description="Ruby's OpenStruct for python",
