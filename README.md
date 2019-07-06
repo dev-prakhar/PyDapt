@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.com/dev-prakhar/pydapt.svg?branch=master)](https://travis-ci.com/dev-prakhar/pydapt)
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 
-# Flexible Object
+#  PyDapt
 
-Flexible objects coverts a dictionary into an object.
+PyDapt coverts a dictionary into an object.
 It is similar to the [OpenStruct](https://ruby-doc.org/stdlib-2.5.1/libdoc/ostruct/rdoc/OpenStruct.html) of ruby.
 
 # Installation
